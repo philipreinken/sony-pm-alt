@@ -14,12 +14,12 @@ from shutil import move
 BCAST_IP = "239.255.255.250" #standard upnp multicast address--don't change
 UPNP_PORT = 1900             #standard upnp multicast port--don't change
 GPHOTO_CMD = "gphoto2"
-GPHOTO_ARGS = ["-P","--skip-existing"]
-GPHOTO_SETTINGS = "~/.gphoto/settings" #default location gphoto2 uses
+GPHOTO_ARGS = ["-P","--skip-existing", "--debug"]
+GPHOTO_SETTINGS = "/home/sony/.gphoto/settings" #default location gphoto2 uses
 CUSTOM_LD_LIBRARY_PATH = "/usr/local/lib" #common path if self-compiled
 
 #Might want to change:
-PHOTO_DIR = "/var/lib/Sony"  #photo/videos will be downloaded to here
+PHOTO_DIR = "/home/sony/data"  #photo/videos will be downloaded to here
 PTP_GUID = "ff:ff:52:54:00:b6:fd:a9:ff:ff:52:3c:28:07:a9:3a" #default value for sony-guid-setter
 DEBUG = True
 #------------------------------------------------------------------
