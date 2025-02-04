@@ -14,7 +14,7 @@ from shutil import move
 BCAST_IP = "239.255.255.250" #standard upnp multicast address--don't change
 UPNP_PORT = 1900             #standard upnp multicast port--don't change
 GPHOTO_CMD = "gphoto2"
-GPHOTO_ARGS = ["-P","--skip-existing"]
+GPHOTO_ARGS = ["-P","--skip-existing", "--debug"]
 GPHOTO_SETTINGS = "/home/sony/.gphoto/settings" #default location gphoto2 uses
 CUSTOM_LD_LIBRARY_PATH = "/usr/local/lib" #common path if self-compiled
 
