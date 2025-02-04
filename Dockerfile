@@ -1,6 +1,6 @@
 FROM python:3-alpine3.9
 
-RUN addgroup sony && adduser -h /home/sony -g '' -G sony -D sony && \
+RUN addgroup --gid=33 sony && adduser --uid=33 -h /home/sony -g '' -G sony -D sony && \
         apk add --no-cache gphoto2 && \
         pip install --no-cache requests
 
