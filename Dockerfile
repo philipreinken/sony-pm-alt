@@ -1,11 +1,18 @@
 FROM python:3-alpine3.9
 
-RUN addgroup --gid=33 sony && adduser --uid=33 -h /home/sony -g '' -G sony -D sony && \
-        apk add --no-cache gphoto2 && \
-        pip install --no-cache requests
+ARG UID=33
+ARG GID=33
+
+RUN <<EOF
+apk add --no-cache gphoto2
+pip install --no-cache requests
+
+mkdir -p /home/sony
+chown -R ${UID}:${GID} /home/sony
+EOF
 
 WORKDIR /home/sony
-USER sony
+USER ${UID}:${GID}
 
 RUN mkdir .gphoto && mkdir data
 
